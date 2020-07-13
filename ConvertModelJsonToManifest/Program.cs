@@ -18,7 +18,7 @@ namespace ConvertModelJsonToManifest {
         static async Task Main (string[] args) {
 
             // Path to the example-public-standards directory included in the project.  
-            string pathFromExeToExampleRoot = "../../../../";
+            string pathFromExeToExampleRoot = "../";
 
             // Instantiate a corpus.
             CdmCorpusDefinition corpus = new CdmCorpusDefinition();

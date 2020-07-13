@@ -3,7 +3,7 @@
 //	2. Accesses the model.json file.
 //	3. Creates and saves the manifest.json file and the resolved definition file(s) for each entity in the storage account.The /binn directory contains
 //	   two libraries that can be used as references.
-// Note: The example-public-standards  directory is already included in this project, but it can also be found at 
+// Note: The example-public-standards directory is already included in this project and contains sample entity definitions. It can also be found at 
 // https://github.com/microsoft/CDM/tree/master/samples/example-public-standards
 
 using Microsoft.CommonDataModel.ObjectModel.Cdm;
@@ -18,7 +18,7 @@ namespace ConvertModelJsonToManifest {
         static async Task Main (string[] args) {
 
             // Path to the example-public-standards directory included in the project.  
-            string pathFromExeToExampleRoot = "../";
+            // string pathFromExeToExampleRoot = "../";
 
             // Instantiate a corpus.
             CdmCorpusDefinition corpus = new CdmCorpusDefinition();
@@ -35,7 +35,7 @@ namespace ConvertModelJsonToManifest {
             var localRoot = corpus.Storage.FetchRootFolder("adls");
 
             // Use the example-public-standards directory to access a local copy of entity definition files.
-            corpus.Storage.Mount("cdm", new LocalAdapter(pathFromExeToExampleRoot + "example-public-standards"));            
+            // corpus.Storage.Mount("cdm", new LocalAdapter(pathFromExeToExampleRoot + "example-public-standards"));            
 
             // Read the model.json file.
             CdmManifestDefinition manifest = await corpus.FetchObjectAsync<CdmManifestDefinition>("model.json");

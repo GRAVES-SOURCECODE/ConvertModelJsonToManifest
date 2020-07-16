@@ -13,10 +13,10 @@
 
   <ItemGroup>
     <Reference Include="Microsoft.CommonDataModel.ObjectModel">
-      <HintPath>..\binn\Microsoft.CommonDataModel.ObjectModel.dll</HintPath>
+      <HintPath>\bin\Debug\netcoreapp3.1\Microsoft.CommonDataModel.ObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CommonDataModel.ObjectModel.Adapter.Adls">
-      <HintPath>..\binn\Microsoft.CommonDataModel.ObjectModel.Adapter.Adls.dll</HintPath>
+      <HintPath>\bin\Debug\netcoreapp3.1\Microsoft.CommonDataModel.ObjectModel.Adapter.Adls.dll</HintPath>
     </Reference>
   </ItemGroup>
 

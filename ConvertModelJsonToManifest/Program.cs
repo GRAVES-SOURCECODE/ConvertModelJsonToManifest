@@ -16,10 +16,7 @@ using System.Threading.Tasks;
 namespace ConvertModelJsonToManifest {
     class Program {
         static async Task Main (string[] args) {
-
-            // Path to the example-public-standards directory included in the project.  
-            string pathFromExeToExampleRoot = "../";
-
+            
             // Instantiate a corpus.
             CdmCorpusDefinition corpus = new CdmCorpusDefinition();
 
@@ -35,7 +32,7 @@ namespace ConvertModelJsonToManifest {
             var localRoot = corpus.Storage.FetchRootFolder("adls");
 
             // Use the example-public-standards directory to access a local copy of entity definition files.
-            corpus.Storage.Mount("cdm", new LocalAdapter(pathFromExeToExampleRoot + "example-public-standards"));            
+            corpus.Storage.Mount("cdm", new LocalAdapter("../../../../example-public-standards"));            
 
             // Read the model.json file.
             CdmManifestDefinition manifest = await corpus.FetchObjectAsync<CdmManifestDefinition>("model.json");

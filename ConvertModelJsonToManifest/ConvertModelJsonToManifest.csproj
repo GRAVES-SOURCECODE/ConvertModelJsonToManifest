@@ -6,18 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.CommonDataModel.ObjectModel" Version="1.0.7" />
+    <PackageReference Include="Microsoft.CommonDataModel.ObjectModel.Adapter.Adls" Version="1.0.7" />
     <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="5.2.7" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="NLog" Version="4.7.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Microsoft.CommonDataModel.ObjectModel">
-      <HintPath>..\binn\Microsoft.CommonDataModel.ObjectModel.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CommonDataModel.ObjectModel.Adapter.Adls">
-      <HintPath>..\binn\Microsoft.CommonDataModel.ObjectModel.Adapter.Adls.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
